@@ -1,0 +1,7 @@
+<h1>댓글 게시판</h1>
+<a href="/posts/new">새글쓰기</a>
+<!--@posts에 들어있는 글들을 하나씩 뽑아서 보여줄게-->
+<% @posts.each do |p| %>
+    <p>제목 : <%= p.title %></p>
+    <p><a href="/posts/show/<%= p.id %>">보러가기</a></p>
+<% end %>
